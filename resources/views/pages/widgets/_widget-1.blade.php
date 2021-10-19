@@ -1,4 +1,4 @@
-{{-- Mixed Widget 1 --}}
+ q{{-- Mixed Widget 1 --}}
 
 <div class="card card-custom bg-gray-100 {{ @$class }}">
     {{-- Header --}}

@@ -100,7 +100,7 @@
 
             </div>
             <div class="d-flex justify-content-center" style="margin-top: 10px">
-                <button type="submit" class="btn btn-success mr-2">Search</button>
+                <button type="submit" class="btn btn-success mr-2">@lang('lang.Search')</button>
             </div>
         </form>
             <table class="table table-bordered table-hover">
