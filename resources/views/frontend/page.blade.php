@@ -3,9 +3,7 @@
 <head>
  @include('frontend.layout-frontend.meta.meta-head')
 </head>
-
 <body>
-
 <!-- ======= Header ======= -->
 @include('frontend.layout-frontend.nav-header')
 
@@ -70,16 +68,12 @@
         </div>
 
     </section><!-- End About Section -->
-
     <!-- ======= Values Section ======= -->
     <section id="values" class="values">
-
         <div class="container" data-aos="fade-up">
-
             <header class="section-header">
                 <p>{{__('Các mảng kinh doanh nổi bật')}}</p>
             </header>
-
             <div class="row">
                 @foreach($bussinessBanners as $bussinessBanner)
                 <div class="col-lg-3">
@@ -91,11 +85,8 @@
                 </div>
                 @endforeach
             </div>
-
         </div>
-
     </section><!-- End Values Section -->
-
     <!-- ======= Counts Section ======= -->
     <section id="counts" class="counts">
         <div class="container" data-aos="fade-up">
@@ -209,17 +200,12 @@
 
                     </div>
                 </div>
-
             </div> <!-- / row -->
-
             <!-- Feature Tabs -->
             <div class="row feture-tabs" data-aos="fade-up">
                 <div class="col-lg-6">
                     <h3>{{__('Sứ mệnh của chúng tôi')}}</h3>
-
                     <!-- Tabs -->
-
-
                     <!-- Tab Content -->
                     <div class="tab-content">
 
@@ -231,15 +217,11 @@
                             <p>Không ngừng nâng cao mọi chất lượng dịch vụ và sản phẩm để phục vụ khách hàng và đối tác, luôn luôn đặt ra những tiêu chuẩn mới hơn, cao hơn để hoàn thiện mọi hoạt động kinh doanh và các sản phẩm, dịch vụ đưa ra thị trường.</p>
                         </div><!-- End Tab 1 Content -->
                     </div>
-
                 </div>
-
                 <div class="col-lg-6">
                     <img src="" class="img-fluid" alt="">
                 </div>
-
             </div><!-- End Feature Tabs -->
-
             <!-- Feature Icons -->
             <div class="row feature-icons" data-aos="fade-up">
                 <h3>{{__('Tầm nhìn của DKT')}}</h3>
@@ -247,7 +229,7 @@
                 <div class="row">
 
                     <div class="col-xl-4 text-center" data-aos="fade-right" data-aos-delay="100">
-                        <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1397193254/7f79b3807df5010bf7f81dcc105610da.png" class="img-fluid p-4" alt="">
+                        <img src="{{asset('FlexStart/assets/img/LogoDKT-G-Black.png')}}" style="max-height: 300px" class="img-fluid p-4" alt="">
                     </div>
 
                     <div class="col-xl-8 d-flex content">
@@ -293,7 +275,6 @@
                                     <p>Đơn giản hóa các điều kiện đầu tư kinh doanh giảm chi phí, thủ tục cho doanh nghiệp</p>
                                 </div>
                             </div>
-
                             <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
                                 <i class="ri-radar-line"></i>
                                 <div>
@@ -301,23 +282,16 @@
                                     <p>Lợi nhuận tăng cho doanh nghiệp</p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
                 </div>
-
             </div><!-- End Feature Icons -->
-
         </div>
-
     </section>
     <!-- End Features Section -->
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
-
         <div class="container" data-aos="fade-up">
-
             <header class="section-header">
                 <p>{{__('Dịch vụ của chúng tôi')}}</p>
             </header>
@@ -333,9 +307,7 @@
                 </div>
                 @endforeach
             </div>
-
         </div>
-
     </section>
     <!-- End Services Section -->
 
@@ -524,15 +496,10 @@
                     </div>
                 @endforeach
                     <!-- End testimonial item -->
-
-
-
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
-
         </div>
-
     </section><!-- End Testimonials Section -->
 
     <!-- ======= Team Section ======= -->
@@ -543,11 +510,8 @@
             <header class="section-header">
                 <p>{{__('Đối tác của chúng tôi')}}</p>
             </header>
-
             <div class="row gy-4">
-
                 <div class="col-lg-3 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-
                 </div>
                 @foreach($partnerBanners as $partnerBanner)
                 <div class="col-lg-3 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
@@ -564,25 +528,19 @@
                 </div>
                 @endforeach
                 <div class="col-lg-3 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
     <!-- End Team Section -->
     <!-- ======= Recent Blog Posts Section ======= -->
     <section id="recent-blog-posts" class="recent-blog-posts">
 
         <div class="container" data-aos="fade-up">
-
             <header class="section-header">
                 <h2>{{__('Tin tức')}}</h2>
                 <p>{{__('Bài đăng gần đây')}}</p>
             </header>
-
             <div class="row">
                 @foreach($recentPosts as $recentPost)
                 <div class="col-lg-4">
@@ -601,14 +559,11 @@
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
-
         <div class="container" data-aos="fade-up">
-
             <header class="section-header">
                 <h2>{{__('Liên hệ')}}</h2>
                 <p>{{__('Liên hệ với chúng tôi')}}</p>
             </header>
-
             <div class="row gy-4">
 
                 <div class="col-lg-6">
@@ -643,21 +598,16 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-
                 <div class="col-lg-6">
                     <form action="" method="post" class="php-email-form">
                         <div class="row gy-4">
-
                             <div class="col-md-6">
                                 <input type="text" name="name" class="form-control" placeholder="{{__('Tên của bạn')}}" required>
                             </div>
-
                             <div class="col-md-6 ">
                                 <input type="email" class="form-control" name="email" placeholder="Email" required>
                             </div>
-
                             <div class="col-md-12">
                                 <input type="text" class="form-control" name="subject" placeholder="{{__('Tiêu đề')}}" required>
                             </div>
@@ -665,7 +615,6 @@
                             <div class="col-md-12">
                                 <textarea class="form-control" name="message" rows="6" placeholder="{{__('Nội dung')}}" required></textarea>
                             </div>
-
                             <div class="col-md-12 text-center">
                                 <div class="loading">Loading</div>
                                 <div class="error-message"></div>
