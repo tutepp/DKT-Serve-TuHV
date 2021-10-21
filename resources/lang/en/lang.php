@@ -14,7 +14,7 @@ return [
     'Vị trí đặt'=>'Placement position',
     'Từ' =>'From',
     'Tới'=>'To',
-    'Tìm kiếm'=>'Search',
+    'timkiem'=>'Search',
     //Items
     'Số thứ tự'=>'Number',
     'Nhóm'=>'Group',

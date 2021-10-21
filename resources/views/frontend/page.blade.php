@@ -14,21 +14,23 @@
 
     <div class="container">
         <div class="row">
+            @foreach($headBanners as $headBanner)
             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                <h1 data-aos="fade-up">Chúng tôi cung cấp các giải pháp hiện đại để phát triển doanh nghiệp của bạn</h1>
-                <h2 data-aos="fade-up" data-aos-delay="400">Đơn giản hoá mở rộng kinh doanh, tối ưu hoá lợi nhuận cho doanh nghiệp</h2>
+                <h1 data-aos="fade-up">{{$headBanner->title}}</h1>
+                <h2 data-aos="fade-up" data-aos-delay="400">{!! $headBanner->description !!}</h2>
                 <div data-aos="fade-up" data-aos-delay="600">
                     <div class="text-center text-lg-start">
                         <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                            <span>Tìm hiểu thêm</span>
+                            <span>{{__('Tìm hiểu thêm')}}</span>
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-                <img src="https://static.topcv.vn/company_covers/RKSo3BYbMLgeGJ73nGpH.jpg" class="img-fluid" alt="">
+                <img src="{{$headBanner->image}}" class="img-fluid" alt="">
             </div>
+            @endforeach
         </div>
     </div>
 
@@ -43,7 +45,7 @@
 
                 <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
                     <div class="content">
-                        <h3>Chúng tôi là ai</h3>
+                        <h3>{{__('Chúng tôi là ai')}}</h3>
                         <h2>
                             {{$introBanner[0]->title}}
                         </h2>
@@ -52,7 +54,7 @@
                         </p>
                         <div class="text-center text-lg-start">
                             <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
-                                <span>Tìm hiểu thêm</span>
+                                <span>{{__('Tìm hiểu thêm')}}</span>
                                 <i class="bi bi-arrow-right"></i>
                             </a>
                         </div>
@@ -74,7 +76,7 @@
         <div class="container" data-aos="fade-up">
 
             <header class="section-header">
-                <p>Các mảng kinh doanh nổi bật</p>
+                <p>{{__('Các mảng kinh doanh nổi bật')}}</p>
             </header>
 
             <div class="row">
@@ -150,7 +152,7 @@
         <div class="container" data-aos="fade-up">
 
             <header class="section-header">
-                <p>Môi trường của DKT E-COMMERCE ,.JSC</p>
+                <p>{{__('Môi trường làm việc của DKT E-COMMERCE ,.JSC')}}</p>
             </header>
 
             <div class="row">
@@ -212,15 +214,10 @@
             <!-- Feature Tabs -->
             <div class="row feture-tabs" data-aos="fade-up">
                 <div class="col-lg-6">
-                    <h3>Sức mệnh của DTK</h3>
+                    <h3>{{__('Sứ mệnh của chúng tôi')}}</h3>
 
                     <!-- Tabs -->
-                    <ul class="nav nav-pills mb-3">
-                        <li>
-                            <a class="nav-link active" data-bs-toggle="pill" href="#tab1">Sức mệnh</a>
-                        </li>
 
-                    </ul><!-- End Tabs -->
 
                     <!-- Tab Content -->
                     <div class="tab-content">
@@ -228,7 +225,7 @@
                         <div class="tab-pane fade show active" id="tab1">
                             <div class="d-flex align-items-center mb-2">
                                 <i class="bi bi-check2"></i>
-                                <h4>Sứ mệnh của chúng tôi </h4>
+                                <h4>{{__('Sứ mệnh của chúng tôi')}}</h4>
                             </div>
                             <p>Không ngừng nâng cao mọi chất lượng dịch vụ và sản phẩm để phục vụ khách hàng và đối tác, luôn luôn đặt ra những tiêu chuẩn mới hơn, cao hơn để hoàn thiện mọi hoạt động kinh doanh và các sản phẩm, dịch vụ đưa ra thị trường.</p>
                         </div><!-- End Tab 1 Content -->
@@ -244,7 +241,7 @@
 
             <!-- Feature Icons -->
             <div class="row feature-icons" data-aos="fade-up">
-                <h3>Tầm nhìn của DKT</h3>
+                <h3>{{__('Tầm nhìn của DKT')}}</h3>
 
                 <div class="row">
 
@@ -741,7 +738,7 @@
 
             <header class="section-header">
 
-                <p>Ban Lãnh Đạo</p>
+                <p>{{__('Ban Lãnh Đạo')}}</p>
             </header>
 
             <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200">
@@ -779,7 +776,7 @@
         <div class="container aos-init aos-animate" data-aos="fade-up">
 
             <header class="section-header">
-                <p>Đối tác của chúng tôi</p>
+                <p>{{__('Đối tác của chúng tôi')}}</p>
             </header>
 
             <div class="row gy-4">
@@ -817,8 +814,8 @@
         <div class="container" data-aos="fade-up">
 
             <header class="section-header">
-                <h2>Tin tức</h2>
-                <p>Những bài đăng gần đây</p>
+                <h2>{{__('Tin tức')}}</h2>
+                <p>{{__('Bài đăng gần đây')}}</p>
             </header>
 
             <div class="row">
@@ -828,15 +825,11 @@
                         <div class="post-img"><img src="{{$recentPost->image}}" class="img-fluid" alt="" style="width: 400px;height: 200px"></div>
                         <span class="post-date">{{$recentPost->created_at}}</span>
                         <h3 class="post-title">{{$recentPost->title}}</h3>
-                        <a href="" class="readmore stretched-link mt-auto"><span>Xem thêm</span><i class="bi bi-arrow-right"></i></a>
+                        <a href="" class="readmore stretched-link mt-auto"><span>{{__('Tìm hiểu thêm')}}</span><i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
                 @endforeach
-
-
-
             </div>
-
         </div>
 
     </section><!-- End Recent Blog Posts Section -->
@@ -847,8 +840,8 @@
         <div class="container" data-aos="fade-up">
 
             <header class="section-header">
-                <h2>Liên hệ</h2>
-                <p>Liên hệ với chúng tôi</p>
+                <h2>{{__('Liên hệ')}}</h2>
+                <p>{{__('Liên hệ với chúng tôi')}}</p>
             </header>
 
             <div class="row gy-4">
@@ -859,14 +852,14 @@
                         <div class="col-md-6">
                             <div class="info-box">
                                 <i class="bi bi-geo-alt"></i>
-                                <h3>Địa chỉ</h3>
+                                <h3>{{__('Địa chỉ')}}</h3>
                                 <p>A108 Adam Street,<br>New York, NY 535022</p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="info-box">
                                 <i class="bi bi-telephone"></i>
-                                <h3>Số điện thoại</h3>
+                                <h3>{{__('Số điện thoại')}}</h3>
                                 <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
                             </div>
                         </div>
@@ -880,8 +873,8 @@
                         <div class="col-md-6">
                             <div class="info-box">
                                 <i class="bi bi-clock"></i>
-                                <h3>Giờ mở của</h3>
-                                <p>Thứ 2 - Thứ 6<br>9:00AM - 05:00PM</p>
+                                <h3>{{__('Giờ mở cửa')}}</h3>
+                                <p>{{__('Thứ 2 - Thứ 6')}}<br>9:00AM - 05:00PM</p>
                             </div>
                         </div>
                     </div>
@@ -893,7 +886,7 @@
                         <div class="row gy-4">
 
                             <div class="col-md-6">
-                                <input type="text" name="name" class="form-control" placeholder="Tên của bạn" required>
+                                <input type="text" name="name" class="form-control" placeholder="{{__('Tên của bạn')}}" required>
                             </div>
 
                             <div class="col-md-6 ">
@@ -901,19 +894,18 @@
                             </div>
 
                             <div class="col-md-12">
-                                <input type="text" class="form-control" name="subject" placeholder="Tiêu đề" required>
+                                <input type="text" class="form-control" name="subject" placeholder="{{__('Tiêu đề')}}" required>
                             </div>
 
                             <div class="col-md-12">
-                                <textarea class="form-control" name="message" rows="6" placeholder="Nội dung" required></textarea>
+                                <textarea class="form-control" name="message" rows="6" placeholder="{{__('Nội dung')}}" required></textarea>
                             </div>
 
                             <div class="col-md-12 text-center">
                                 <div class="loading">Loading</div>
                                 <div class="error-message"></div>
-                                <div class="sent-message">Lời nhắn của bạn đã được gửi. Xin cảm ơn!</div>
-
-                                <button type="submit">Gửi tin nhắn</button>
+                                <div class="sent-message">{{__('Lời nhắn của bạn đã được gửi. Xin cảm ơn!')}}</div>
+                                <button type="submit">{{__('Gửi tin nhắn')}}</button>
                             </div>
 
                         </div>

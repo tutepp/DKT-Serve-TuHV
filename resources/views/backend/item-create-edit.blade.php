@@ -8,7 +8,6 @@
         <div class="card-header flex-wrap border-0 pt-6 pb-0">
             <div class="card-title">
                 <h3 class="card-label">HTML Table
-                    <div class="text-muted pt-2 font-size-sm">Datatable initialized from HTML table</div>
                 </h3>
             </div>
             <div class="card-toolbar">
@@ -134,6 +133,7 @@
                                 <div class="col">
                                     <label>Position</label>
                                     <select class="form-control form-control-solid" name="position">
+                                        <option value="head-banner">head-banner</option>
                                         <option value="intro-banner">intro-banner</option>
                                         <option value="business-banner">business-banner</option>
                                         <option value="enviroment-banner">enviroment-banner</option>
@@ -156,7 +156,7 @@
                                     </div>
                                 </div>
                                 <div class="col" style="margin-top: 35px">
-                                    <img src="{{$item->image ?? ""}}" id="image_result" style="width: 400px;height: 300px">
+                                    <img src="{{$item->image ?? ""}}" id="image_result" style="max-height: 250px">
                                 </div>
                             </div>
                             <div class="form-group" >

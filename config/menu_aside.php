@@ -35,14 +35,14 @@ return [
 
             ]
         ],
-    //        [
-    //            'title' => 'Quản lý quảng cáo',
-    //            'icon' => 'media/svg/icons/Shopping/Barcode-read.svg',
-    //            'bullet' => 'dot',
-    //            'root' => true,
-    //            'page' => '/advertisement'
-    //
-    //        ]
+            [
+                'title' => 'Quản lý quảng cáo',
+                'icon' => 'media/svg/icons/Shopping/Barcode-read.svg',
+                'bullet' => 'dot',
+                'root' => true,
+                'page' => '/advertisement'
+
+            ]
 
     ]
 

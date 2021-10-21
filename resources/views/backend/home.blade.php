@@ -22,7 +22,7 @@
                         </g>
                     </svg>
                     <!--end::Svg Icon-->
-                </span>Tạo mới</a>
+                </span>{{__('Tạo mới')}}</a>
                 <!--end::Button-->
             </div>
         </div>
@@ -34,7 +34,7 @@
                 <div class="col-lg-3">
                     <div class="input-group flex-nowrap">
                         <span class="input-group-text" id="addon-wrapping" style="background-color: #e6e6ff "><i class="fas fa-book-reader"></i></span>
-                        <input type="text" class="form-control" placeholder="Tiêu đề" aria-label="Tiêu đề" aria-describedby="addon-wrapping">
+                        <input type="text" class="form-control" placeholder="{{__('Title')}}" aria-label="Tiêu đề" aria-describedby="addon-wrapping">
                     </div>
                 </div>
                 <div class="col-lg-3">
@@ -42,6 +42,7 @@
                         <span class="input-group-text" id="addon-wrapping" style="background-color: #e6e6ff"><i class="far fa-newspaper"></i></span>
                         <select class="form-control form-control-solid" name="group_id">
                             @foreach($groups as $group)
+                                <option>{{__('Danh mục bài viết')}}</option>
                                 <option value="{{$group->id}}">{{$group->title}}</option>
                                 @if($group->child)
                                     @foreach($group->child as $gr)
@@ -56,8 +57,8 @@
                     <div class="input-group flex-nowrap">
                         <span class="input-group-text" id="addon-wrapping" style="background-color: #e6e6ff"><i class="fas fa-toggle-on"></i></span>
                         <select class="form-control form-control-solid" name="status">
-                            <option value="1">Hoạt động</option>
-                            <option value="0">Tạm dừng</option>
+                            <option value="1">{{__('Hoạt động')}}</option>
+                            <option value="0">{{__('Tạm ngừng')}}</option>
                         </select>
                     </div>
                 </div>
@@ -67,7 +68,8 @@
                             <i class="fas fa-thumbtack"></i>
                         </span>
                         <select class="form-control form-control-solid" name="position">
-                            <option value="">Vị trí đặt</option>
+                            <option value="">{{__('Vị trí đặt')}}</option>
+                            <option value="head-banner">head-banner</option>
                             <option value="intro-banner">intro-banner</option>
                             <option value="business-banner">business-banner</option>
                             <option value="enviroment-banner">enviroment-banner</option>
@@ -84,7 +86,7 @@
                 <div class="col-lg-3">
                     <div class="input-group flex-nowrap">
                         <span class="input-group-text" id="addon-wrapping" style="background-color: #e6e6ff ">
-                            <i class="far fa-calendar-alt">    From</i>
+                            <i class="far fa-calendar-alt">    {{__('Từ')}}</i>
                         </span>
                         <input type="date" class="form-control"  aria-label="from" aria-describedby="addon-wrapping" name="from">
                     </div>
@@ -92,7 +94,7 @@
                 <div class="col-lg-3">
                     <div class="input-group flex-nowrap">
                         <span class="input-group-text" id="addon-wrapping" style="background-color: #e6e6ff " >
-                            <i class="far fa-calendar-alt">    To</i>
+                            <i class="far fa-calendar-alt">    {{__('Tới')}}</i>
                         </span>
                         <input type="date" class="form-control"  aria-label="to" aria-describedby="addon-wrapping" name="to">
                     </div>
@@ -100,20 +102,20 @@
 
             </div>
             <div class="d-flex justify-content-center" style="margin-top: 10px">
-                <button type="submit" class="btn btn-success mr-2">@lang('lang.Search')</button>
+                <button type="submit" class="btn btn-success mr-2">{{__('Tìm kiếm')}}</button>
             </div>
         </form>
             <table class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                    <th>STT</th>
-                    <th>Tiêu đề</th>
-                    <th>Nhóm</th>
-                    <th>Trạng thái</th>
-                    <th>Tác giả</th>
-                    <th>Ảnh</th>
-                    <th>Vị tri đặt</th>
-                    <th>Tác vụ</th>
+                    <th>{{__('STT')}}</th>
+                    <th>{{__('Tiêu đề')}}</th>
+                    <th>{{__('Danh mục bài viết')}}</th>
+                    <th>{{__('Trạng thái')}}</th>
+                    <th>{{__('Tác giả')}}</th>
+                    <th>{{__('Ảnh')}}</th>
+                    <th>{{__('Vị tri đặt')}}</th>
+                    <th>{{__('Tác vụ')}}</th>
                 </tr>
                 </thead>
                 <tbody id="listItems">

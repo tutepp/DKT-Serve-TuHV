@@ -1679,13 +1679,13 @@ class Request
             return $this->languages;
         }
 
-        $languages = AcceptHeader::fromString($this->headers->get('Accept-Language'))->all();
+        $languages = AcceptHeader::fromString($this->headers->get('Accept-Locale'))->all();
         $this->languages = [];
         foreach ($languages as $lang => $acceptHeaderItem) {
             if (false !== strpos($lang, '-')) {
                 $codes = explode('-', $lang);
                 if ('i' === $codes[0]) {
-                    // Language not listed in ISO 639 that are not variants
+                    // Locale not listed in ISO 639 that are not variants
                     // of any listed language, which can be registered with the
                     // i-prefix, such as i-cherokee
                     if (\count($codes) > 1) {

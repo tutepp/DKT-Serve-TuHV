@@ -124,6 +124,7 @@
                         </span>
                             <select class="form-control form-control-solid" name="position">
                                 <option value="">Vị trí đặt</option>
+                                <option value="head-banner">head-banner</option>
                                 <option value="intro-banner">intro-banner</option>
                                 <option value="business-banner">business-banner</option>
                                 <option value="enviroment-banner">enviroment-banner</option>

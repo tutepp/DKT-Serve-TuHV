@@ -1016,7 +1016,7 @@ class Response
         $this->setContent(null);
 
         // remove headers that MUST NOT be included with 304 Not Modified responses
-        foreach (['Allow', 'Content-Encoding', 'Content-Language', 'Content-Length', 'Content-MD5', 'Content-Type', 'Last-Modified'] as $header) {
+        foreach (['Allow', 'Content-Encoding', 'Content-Locale', 'Content-Length', 'Content-MD5', 'Content-Type', 'Last-Modified'] as $header) {
             $this->headers->remove($header);
         }
 

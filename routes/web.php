@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 use App\Http\Controllers\AdvertisementController;
 use App\Http\Controllers\BlogController;
@@ -6,6 +6,7 @@ use App\Http\Controllers\GroupController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,14 +19,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//Language
-Route::get('lang/{locale}',function ($locale){
-   if(! in_array($locale,['en','vi'])){
-       abort(404);
-   }
-   session()->put('locate',$locale);
-   return redirect()->back();
-});
+//Locale
+    Route::group(['middleware' => 'locale'], function() {
+        Route::get('change-language/{language}', [HomeController::class,'changeLanguage'])
+            ->name('user.change-language');
+
 
 //Main
 Route::resource('home',ItemController::class)->middleware(['auth']);
@@ -45,15 +43,12 @@ Route::get('/advertisement',[AdvertisementController::class,'index'])->name('ite
 //User
 Route::resource('/users',UserController::class)->middleware(['auth']);
 //frontend
-Route::get('/page',[PageController::class,'index'])->name('page.index');
-
+Route::get('/',[PageController::class,'index'])->name('page.index');
 
 Route::get('/blog',[BlogController::class,'index'])->name('blog.index');
 
-
 Route::get('/blog/{slug}',[BlogController::class,'getItem'])->name('blog.item');
 
-
-
+    });
 
 require __DIR__.'/auth.php';

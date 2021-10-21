@@ -8,12 +8,39 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto active" href="{{route('page.index')}}">Trang chủ</a></li>
-                <li><a class="nav-link scrollto" href="{{route('blog.index')}}">Tin tức</a></li>
-                <li><a class="nav-link scrollto" href="#services">Dự án</a></li>
-                <li><a class="nav-link scrollto" href="#services">Tuyển dụng</a></li>
-                <li><a class="nav-link scrollto" href="#portfolio">Về chúng tôi</a></li>
-
+                <li><a class="nav-link scrollto active" href="{{route('page.index')}}">{{__('Trang chủ')}}</a></li>
+                <li><a class="nav-link scrollto" href="{{route('blog.index')}}">{{__('Tin tức')}}</a></li>
+                <li><a class="nav-link scrollto" href="#services">{{__('Dự án')}}</a></li>
+                <li><a class="nav-link scrollto" href="#services">{{__('Tuyển dụng')}}</a></li>
+                <li><a class="nav-link scrollto" href="#portfolio">{{__('Về chúng tôi')}}</a></li>
+                <li class="dropdown">
+                    <a href="#">
+                        <img  style="max-height: 20px" src="
+                        @if(Session::get('website_language') == 'vi')
+                            https://vectorflags.s3.amazonaws.com/flags/vn-button-01.png
+                        @else https://icon-library.com/images/flag-usa-icon/flag-usa-icon-18.jpg
+                        @endif
+                            " alt=""/>
+                    </a>
+                        <ul>
+                            <li class="navi-item">
+                                <a href="{!! route('user.change-language', 'vi') !!}" class="navi-link">
+                                    <span>
+                                      <img style="max-height:20px" src="https://vectorflags.s3.amazonaws.com/flags/vn-button-01.png" alt=""/>
+                                    </span>
+                                    <span style="margin-right: 55px">Việt Nam</span>
+                                </a>
+                            </li>
+                            <li class="navi-item active">
+                                <a href="{!! route('user.change-language', 'en') !!}" class="navi-link">
+                                    <span>
+                                         <img style="max-height:20px" src="https://icon-library.com/images/flag-usa-icon/flag-usa-icon-18.jpg" alt=""/>
+                                    </span>
+                                     <span style="margin-right: 70px">English</span>
+                                </a>
+                            </li>
+                        </ul>
+                </li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>

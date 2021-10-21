@@ -7,8 +7,8 @@
     <div class="card card-custom">
         <div class="card-header flex-wrap border-0 pt-6 pb-0">
             <div class="card-title">
-                <h3 class="card-label">Bảng quản lý thông tin
-                    <div class="text-muted pt-2 font-size-sm">Bảng quản lý Items</div>
+                <h3 class="card-label">{{__('Danh mục bài viết')}}
+
                 </h3>
             </div>
             <div class="card-toolbar">
@@ -24,7 +24,7 @@
                         </g>
                     </svg>
                     <!--end::Svg Icon-->
-                </span>Tạo mới</a>
+                </span>{{__('Tạo mới')}}</a>
                 <!--end::Button-->
             </div>
         </div>

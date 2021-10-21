@@ -1071,7 +1071,7 @@
 				oSettings._iRecordsTotal = tmp ? oInit.iDeferLoading[1] : oInit.iDeferLoading;
 			}
 
-			/* Language definitions */
+			/* Locale definitions */
 			var oLanguage = oSettings.oLanguage;
 			$.extend( true, oLanguage, oInit.oLanguage );
 
@@ -1723,7 +1723,7 @@
 
 
 	/**
-	 * Language compatibility - when certain options are given, and others aren't, we
+	 * Locale compatibility - when certain options are given, and others aren't, we
 	 * need to duplicate the values over, in order to provide backwards compatibility
 	 * with older language files.
 	 *  @param {object} oSettings dataTables settings object
@@ -11275,7 +11275,7 @@
 				 *  @type string
 				 *  @default : activate to sort column ascending
 				 *
-				 *  @dtopt Language
+				 *  @dtopt Locale
 				 *  @name DataTable.defaults.language.aria.sortAscending
 				 *
 				 *  @example
@@ -11298,7 +11298,7 @@
 				 *  @type string
 				 *  @default : activate to sort column ascending
 				 *
-				 *  @dtopt Language
+				 *  @dtopt Locale
 				 *  @name DataTable.defaults.language.aria.sortDescending
 				 *
 				 *  @example
@@ -11328,7 +11328,7 @@
 				 *  @type string
 				 *  @default First
 				 *
-				 *  @dtopt Language
+				 *  @dtopt Locale
 				 *  @name DataTable.defaults.language.paginate.first
 				 *
 				 *  @example
@@ -11351,7 +11351,7 @@
 				 *  @type string
 				 *  @default Last
 				 *
-				 *  @dtopt Language
+				 *  @dtopt Locale
 				 *  @name DataTable.defaults.language.paginate.last
 				 *
 				 *  @example
@@ -11374,7 +11374,7 @@
 				 *  @type string
 				 *  @default Next
 				 *
-				 *  @dtopt Language
+				 *  @dtopt Locale
 				 *  @name DataTable.defaults.language.paginate.next
 				 *
 				 *  @example
@@ -11397,7 +11397,7 @@
 				 *  @type string
 				 *  @default Previous
 				 *
-				 *  @dtopt Language
+				 *  @dtopt Locale
 				 *  @name DataTable.defaults.language.paginate.previous
 				 *
 				 *  @example
@@ -11422,7 +11422,7 @@
 			 *  @type string
 			 *  @default No data available in table
 			 *
-			 *  @dtopt Language
+			 *  @dtopt Locale
 			 *  @name DataTable.defaults.language.emptyTable
 			 *
 			 *  @example
@@ -11454,7 +11454,7 @@
 			 *  @type string
 			 *  @default Showing _START_ to _END_ of _TOTAL_ entries
 			 *
-			 *  @dtopt Language
+			 *  @dtopt Locale
 			 *  @name DataTable.defaults.language.info
 			 *
 			 *  @example
@@ -11475,7 +11475,7 @@
 			 *  @type string
 			 *  @default Showing 0 to 0 of 0 entries
 			 *
-			 *  @dtopt Language
+			 *  @dtopt Locale
 			 *  @name DataTable.defaults.language.infoEmpty
 			 *
 			 *  @example
@@ -11497,7 +11497,7 @@
 			 *  @type string
 			 *  @default (filtered from _MAX_ total entries)
 			 *
-			 *  @dtopt Language
+			 *  @dtopt Locale
 			 *  @name DataTable.defaults.language.infoFiltered
 			 *
 			 *  @example
@@ -11520,7 +11520,7 @@
 			 *  @type string
 			 *  @default <i>Empty string</i>
 			 *
-			 *  @dtopt Language
+			 *  @dtopt Locale
 			 *  @name DataTable.defaults.language.infoPostFix
 			 *
 			 *  @example
@@ -11550,7 +11550,7 @@
 			 *  @type string
 			 *  @default
 			 *
-			 *  @dtopt Language
+			 *  @dtopt Locale
 			 *  @name DataTable.defaults.language.decimal
 			 *
 			 *  @example
@@ -11574,7 +11574,7 @@
 			 *  @type string
 			 *  @default ,
 			 *
-			 *  @dtopt Language
+			 *  @dtopt Locale
 			 *  @name DataTable.defaults.language.thousands
 			 *
 			 *  @example
@@ -11597,11 +11597,11 @@
 			 *  @type string
 			 *  @default Show _MENU_ entries
 			 *
-			 *  @dtopt Language
+			 *  @dtopt Locale
 			 *  @name DataTable.defaults.language.lengthMenu
 			 *
 			 *  @example
-			 *    // Language change only
+			 *    // Locale change only
 			 *    $(document).ready( function() {
 			 *      $('#example').dataTable( {
 			 *        "language": {
@@ -11611,7 +11611,7 @@
 			 *    } );
 			 *
 			 *  @example
-			 *    // Language and options change
+			 *    // Locale and options change
 			 *    $(document).ready( function() {
 			 *      $('#example').dataTable( {
 			 *        "language": {
@@ -11639,7 +11639,7 @@
 			 *  @type string
 			 *  @default Loading...
 			 *
-			 *  @dtopt Language
+			 *  @dtopt Locale
 			 *  @name DataTable.defaults.language.loadingRecords
 			 *
 			 *  @example
@@ -11660,7 +11660,7 @@
 			 *  @type string
 			 *  @default Processing...
 			 *
-			 *  @dtopt Language
+			 *  @dtopt Locale
 			 *  @name DataTable.defaults.language.processing
 			 *
 			 *  @example
@@ -11684,7 +11684,7 @@
 			 *  @type string
 			 *  @default Search:
 			 *
-			 *  @dtopt Language
+			 *  @dtopt Locale
 			 *  @name DataTable.defaults.language.search
 			 *
 			 *  @example
@@ -11715,7 +11715,7 @@
 			 *  @type string
 			 *  @default
 			 *
-			 *  @dtopt Language
+			 *  @dtopt Locale
 			 *  @name DataTable.defaults.language.searchPlaceholder
 			 */
 			"sSearchPlaceholder": "",
@@ -11731,7 +11731,7 @@
 			 *  @type string
 			 *  @default <i>Empty string - i.e. disabled</i>
 			 *
-			 *  @dtopt Language
+			 *  @dtopt Locale
 			 *  @name DataTable.defaults.language.url
 			 *
 			 *  @example
@@ -11753,7 +11753,7 @@
 			 *  @type string
 			 *  @default No matching records found
 			 *
-			 *  @dtopt Language
+			 *  @dtopt Locale
 			 *  @name DataTable.defaults.language.zeroRecords
 			 *
 			 *  @example
@@ -13117,7 +13117,7 @@
 		},
 
 		/**
-		 * Language information for the table.
+		 * Locale information for the table.
 		 *  @namespace
 		 *  @extends DataTable.defaults.oLanguage
 		 */

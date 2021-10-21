@@ -35,7 +35,7 @@ class ItemController extends Controller
         $item->group()->attach($request->group_id);
         $item->save();
         Toastr::success('Bạn đã tạo thành công', 'Thành công');
-        return Redirect::back();
+        return redirect()->route('home.index');
     }
 
     public function edit($id)

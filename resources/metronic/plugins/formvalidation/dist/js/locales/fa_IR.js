@@ -5,7 +5,7 @@
 }(this, (function () { 'use strict';
 
     /**
-     * Persian (Farsi) Language package.
+     * Persian (Farsi) Locale package.
      * Translated by @i0
      */
 

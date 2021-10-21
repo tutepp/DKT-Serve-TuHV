@@ -7,8 +7,7 @@
     <div class="card card-custom">
         <div class="card-header flex-wrap border-0 pt-6 pb-0">
             <div class="card-title">
-                <h3 class="card-label">Quản lý tài khoản
-
+                <h3 class="card-label">{{__('Quản lý tài khoản')}}
                 </h3>
             </div>
             <div class="card-toolbar">
@@ -24,7 +23,7 @@
                         </g>
                     </svg>
                     <!--end::Svg Icon-->
-                </span>Thêm mới tài khoản</a>
+                </span>{{__('Thêm mới tài khoản')}}</a>
                 <!--end::Button-->
             </div>
         </div>
@@ -44,7 +43,7 @@
                                     <!--begin::Pic-->
                                     <div class="flex-shrink-0 mr-7">
                                         <div class="symbol symbol-50 symbol-lg-120">
-                                            <img alt="Pic" src="{{$user->image}}" />
+                                            <img alt="Pic" src="{{$user->image}}" style="max-height: 120px" />
                                         </div>
                                     </div>
                                     <!--end::Pic-->
@@ -78,8 +77,8 @@
                                             <!--begin::User-->
                                             <!--begin::Actions-->
                                             <div class="my-lg-0 my-1">
-                                                <a href="{{route('users.edit',$user->id)}}" class="btn btn-sm btn-primary font-weight-bolder text-uppercase">Sửa thông tin   <i class="fas fa-user-edit"></i></a>
-                                                <a href="#" class="btn btn-sm btn-primary font-weight-bolder text-uppercase">Xoá   <i class="fas fa-user-minus"></i></a>
+                                                <a href="{{route('users.edit',$user->id)}}" class="btn btn-sm btn-primary font-weight-bolder text-uppercase">{{__('Sửa thông tin')}}   <i class="fas fa-user-edit"></i></a>
+                                                <a href="#" class="btn btn-sm btn-primary font-weight-bolder text-uppercase">{{__('Xoá')}}   <i class="fas fa-user-minus"></i></a>
                                             </div>
                                             <!--end::Actions-->
                                         </div>

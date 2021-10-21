@@ -19,7 +19,7 @@ use Symfony\Component\HttpFoundation\Response;
  *
  * For more information, read the following W3C notes:
  *
- *  * ESI Language Specification 1.0 (http://www.w3.org/TR/esi-lang)
+ *  * ESI Locale Specification 1.0 (http://www.w3.org/TR/esi-lang)
  *
  *  * Edge Architecture Specification (http://www.w3.org/TR/edge-arch)
  *
