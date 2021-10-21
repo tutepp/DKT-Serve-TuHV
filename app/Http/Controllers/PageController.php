@@ -22,13 +22,15 @@ class PageController extends Controller
         $partnerBanners = $this->getPartnersBanner();
         $managerBanners =$this->getManagerBanner();
         $headBanners =$this->getHeadBanner();
+        $serviceBanners =$this->getServiceBanner();
         return view('frontend.page', ['items'=>$items,
             'recentPosts'=>$recentPosts,
             'introBanner'=>$introBanner,
             'bussinessBanners'=>$bussinessBanners,
             'partnerBanners'=>$partnerBanners,
             'managerBanners'=>$managerBanners,
-            'headBanners'=>$headBanners,
+            'headBanners'=> $headBanners,
+            'serviceBanners'=> $serviceBanners
         ]);
     }
     public function getRecentPost()
@@ -62,6 +64,11 @@ class PageController extends Controller
     {
         return
             Item::where('position','head-banner')->where('status',1)->get(['id','title','image','description','content']);
+    }
+    public function getServiceBanner()
+    {
+        return
+            Item::where('position','service-banner')->where('status',1)->get(['id','title','content']);
     }
 
 

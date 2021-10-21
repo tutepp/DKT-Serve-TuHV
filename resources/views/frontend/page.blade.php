@@ -311,7 +311,33 @@
 
         </div>
 
-    </section><!-- End Features Section -->
+    </section>
+    <!-- End Features Section -->
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+
+        <div class="container" data-aos="fade-up">
+
+            <header class="section-header">
+                <p>{{__('Dịch vụ của chúng tôi')}}</p>
+            </header>
+            <div class="row gy-4">
+                @foreach($serviceBanners as $serviceBanner)
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-box blue">
+                        <i class="ri-discuss-line icon"></i>
+                        <h3>{{$serviceBanner->title}}</h3>
+                        <p>{!! $serviceBanner->content !!}</p>
+                        <a href="#" class="read-more"><span>{{__('Xem thêm')}}</span> <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+
+        </div>
+
+    </section>
+    <!-- End Services Section -->
 
 {{--    <!-- ======= Services Section ======= -->--}}
 <!-- ======= Portfolio Section ======= -->
