@@ -14,8 +14,8 @@
         <div class="row">
             @foreach($headBanners as $headBanner)
             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                <h1 data-aos="fade-up">{{$headBanner->title}}</h1>
-                <h2 data-aos="fade-up" data-aos-delay="400">{!! $headBanner->description !!}</h2>
+                <h2 data-aos="fade-up" style="font-size: 24px;font-weight: 700;color: #012970;">{{$headBanner->title}}</h2>
+                <h2 data-aos="fade-up" data-aos-delay="400" style="font-size: 18px">{!! $headBanner->description !!}</h2>
                 <div data-aos="fade-up" data-aos-delay="600">
                     <div class="text-center text-lg-start">
                         <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
@@ -78,7 +78,7 @@
                 @foreach($bussinessBanners as $bussinessBanner)
                 <div class="col-lg-3">
                     <div class="box" data-aos="fade-up" data-aos-delay="200">
-                        <img src="{{$bussinessBanner->image}}" class="img-fluid" alt="">
+                        <img src="{{$bussinessBanner->image}}" style="max-height: 110px" alt="">
                         <h3>{{$bussinessBanner->title}}</h3>
                         <p>{!! $bussinessBanner->content !!}</p>
                     </div>
