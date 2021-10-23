@@ -42,7 +42,19 @@ return [
                 'root' => true,
                 'page' => '/advertisement'
 
-            ]
+            ],
+
+        [
+            'section' => 'HỆ THỐNG',
+        ],
+        [
+            'title' => 'Cấu hình chung',
+            'icon' => 'media/svg/icons/Layout/Layout-4-blocks.svg',
+            'bullet' => 'line',
+            'root' => true,
+            'page' => '/setting',
+
+        ],
 
     ]
 
