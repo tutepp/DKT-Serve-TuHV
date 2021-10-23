@@ -78,7 +78,7 @@
                 @foreach($bussinessBanners as $bussinessBanner)
                 <div class="col-lg-3">
                     <div class="box" data-aos="fade-up" data-aos-delay="200">
-                        <img src="{{$bussinessBanner->image}}" style="max-height: 110px" alt="">
+                        <img src="{{$bussinessBanner->image}}" style="max-height: 18git add0px" alt="">
                         <h3>{{$bussinessBanner->title}}</h3>
                         <p>{!! $bussinessBanner->content !!}</p>
                     </div>
