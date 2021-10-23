@@ -31,7 +31,7 @@
   }
 
   /**
-   * Easy on scroll event listener 
+   * Easy on scroll event listener
    */
   const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
@@ -221,7 +221,7 @@
   });
 
   /**
-   * Initiate portfolio lightbox 
+   * Initiate portfolio lightbox
    */
   const portfolioLightbox = GLightbox({
     selector: '.portfokio-lightbox'
@@ -270,6 +270,36 @@
       }
     }
   });
+
+    new Swiper('.recent-blog-posts-in', {
+        speed: 600,
+        loop: true,
+        // autoplay: {
+        //     delay: 5000,
+        //     disableOnInteraction: false
+        // },
+        autoplay : false,
+        slidesPerView: 'auto',
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 40
+            },
+            680: {
+                slidesPerView: 2,
+                spaceBetween: 40
+            },
+
+            1200: {
+                slidesPerView: 3,
+            }
+        }
+    });
 
   /**
    * Animation on scroll

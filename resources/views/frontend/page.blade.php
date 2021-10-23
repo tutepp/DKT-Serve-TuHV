@@ -388,17 +388,19 @@
                 <h2>{{__('Tin tức')}}</h2>
                 <p>{{__('Bài đăng gần đây')}}</p>
             </header>
-            <div class="row">
-                @foreach($recentPosts as $recentPost)
-                <div class="col-lg-4">
-                    <div class="post-box">
-                        <div class="post-img"><img src="{{$recentPost->image}}" class="img-fluid" alt="" style="width: 400px;height: 200px"></div>
-                        <span class="post-date">{{$recentPost->created_at}}</span>
-                        <h3 class="post-title">{{$recentPost->title}}</h3>
-                        <a href="" class="readmore stretched-link mt-auto"><span>{{__('Tìm hiểu thêm')}}</span><i class="bi bi-arrow-right"></i></a>
-                    </div>
+            <div class="row recent-blog-posts-in swiper">
+                <div class="swiper-wrapper">
+                    @foreach($recentPosts as $recentPost)
+                        <div class="col-lg-4 swiper-slide">
+                            <div class="post-box">
+                                <div class="post-img"><img src="{{$recentPost->image}}" class="img-fluid" alt="" style="width: 400px;height: 200px"></div>
+                                <span class="post-date">{{$recentPost->created_at}}</span>
+                                <h3 class="post-title">{{$recentPost->title}}</h3>
+                                <a href="" class="readmore stretched-link mt-auto"><span>{{__('Tìm hiểu thêm')}}</span><i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
-                @endforeach
             </div>
         </div>
 

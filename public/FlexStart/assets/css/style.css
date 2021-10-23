@@ -675,7 +675,7 @@ section {
 .services .service-box {
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
   height: 100%;
-  padding: 60px 30px;
+  padding: 30px 30px;
   text-align: center;
   transition: 0.3s;
   border-radius: 5px;
@@ -689,6 +689,7 @@ section {
   display: inline-block;
   line-height: 0;
   transition: 0.3s;
+  margin-top: 45px
 }
 .services .service-box h3 {
   color: #444444;
@@ -1315,9 +1316,16 @@ section {
 }
 .recent-blog-posts .post-box .post-img {
   overflow: hidden;
-  margin: -30px -30px 15px -30px;
+  /*margin: -30px -30px 15px -30px;*/
+    margin: 0 -15px;
   position: relative;
 }
+@media (max-width: 480px) {
+    .recent-blog-posts-in .swiper-slide {
+        margin-right: 30px !important;
+    }
+}
+
 .recent-blog-posts .post-box .post-img img {
   transition: 0.5s;
 }
