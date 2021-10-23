@@ -672,9 +672,9 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
-@media (max-width: 1500px) {
+@media (max-width: 1280px) {
 .service-box{
-    margin-left: 42px
+    margin-left: 25px
 }
 }
 .services .service-box {
