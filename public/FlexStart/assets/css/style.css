@@ -672,14 +672,21 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+@media (max-width: 1500px) {
+.service-box{
+    margin-left: 8px
+}
+}
 .services .service-box {
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
-  height: 100%;
   padding: 30px 30px;
   text-align: center;
   transition: 0.3s;
   border-radius: 5px;
+  height: 420px;
+  width: 280px;
 }
+
 .services .service-box .icon {
   font-size: 36px;
   padding: 40px 20px;
@@ -689,7 +696,7 @@ section {
   display: inline-block;
   line-height: 0;
   transition: 0.3s;
-  margin-top: 45px
+
 }
 .services .service-box h3 {
   color: #444444;

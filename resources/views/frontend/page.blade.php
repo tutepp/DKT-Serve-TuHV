@@ -295,10 +295,12 @@
             <header class="section-header">
                 <p>{{__('Dịch vụ của chúng tôi')}}</p>
             </header>
-            <div class="row gy-4">
+            <div class="row service swiper">
+                <div class="swiper-wrapper">
+{{--                    <div class="row gy-4">--}}
                 @foreach($serviceBanners as $serviceBanner)
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-box blue">
+                <div class="col-lg-3 col-md-6 swiper-slide" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-box blue ">
                         <i class="ri-discuss-line icon"></i>
                         <h3>{{$serviceBanner->title}}</h3>
                         <p>{!! $serviceBanner->content !!}</p>
@@ -306,6 +308,8 @@
                     </div>
                 </div>
                 @endforeach
+{{--            </div>--}}
+                </div>
             </div>
         </div>
     </section>

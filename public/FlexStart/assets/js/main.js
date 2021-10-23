@@ -301,6 +301,41 @@
         }
     });
 
+    //service
+    new Swiper('.service', {
+        speed: 600,
+        loop: true,
+        // autoplay: {
+        //     delay: 5000,
+        //     disableOnInteraction: false
+        // },
+        autoplay : true,
+        slidesPerView: 'auto',
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true
+        },
+        breakpoints: {
+            300:{
+                slidesPerView: 1,
+                spaceBetween: 20
+            },
+            600: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            900: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+
+            1200: {
+                slidesPerView: 4,
+                spaceBetween: 20
+            }
+        }
+    });
   /**
    * Animation on scroll
    */
