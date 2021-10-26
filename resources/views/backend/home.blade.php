@@ -217,7 +217,6 @@
                     $('#listItems').html(response);
                 }
             })
-
             })
         })
 
