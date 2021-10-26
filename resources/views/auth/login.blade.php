@@ -14,14 +14,12 @@
 
         <form method="POST" action="{{ route('login') }}">
             @csrf
-
             <!-- Email Address -->
             <div>
                 <x-label for="email" :value="__('Email')" />
 
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
             </div>
-
             <!-- Password -->
             <div class="mt-4">
                 <x-label for="password" :value="__('Password')" />
@@ -46,11 +44,15 @@
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif
+                <button class="ml-4">
+                    <a href="{{route('register')}}"> {{ __('Register') }}</a>
 
+                </button>
                 <x-button class="ml-3">
                     {{ __('Log in') }}
                 </x-button>
             </div>
         </form>
+
     </x-auth-card>
 </x-guest-layout>

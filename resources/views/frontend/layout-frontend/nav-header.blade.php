@@ -18,9 +18,12 @@
                         <img  style="max-height: 20px" src="
                         @if(Session::get('website_language') == 'vi')
                             https://vectorflags.s3.amazonaws.com/flags/vn-button-01.png
-                        @else https://icon-library.com/images/flag-usa-icon/flag-usa-icon-18.jpg
+                        @elseif(Session::get('website_language') == 'en')
+                            https://icon-library.com/images/flag-usa-icon/flag-usa-icon-18.jpg
+                        @else
+                            https://vectorflags.s3.amazonaws.com/flags/vn-button-01.png
                         @endif
-                            " alt=""/>
+                            "alt=" "/>
                     </a>
                         <ul>
                             <li class="navi-item">

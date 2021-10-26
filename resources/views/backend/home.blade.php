@@ -140,7 +140,7 @@
                           $color ="dark";
                         }
                         ?>
-                            <span class="label label-{{$color}}  label-pill label-inline mr-2">{{$status}}</span>
+                        <button type="button" class="btn btn-{{$color}}">{{$status}}</button>
                     </td>
                     <td>{{$item->user->name}}</td>
                     <td><img src="{!! $item->image !!}" style=" max-height: 70px" class="d-flex justify-content-center"></td>
