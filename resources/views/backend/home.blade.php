@@ -72,6 +72,7 @@
                             <option value="head-banner">head-banner</option>
                             <option value="intro-banner">intro-banner</option>
                             <option value="business-banner">business-banner</option>
+                            <option value="service-banner">service-banner</option>
                             <option value="enviroment-banner">enviroment-banner</option>
                             <option value="vision-banner">vision-banner</option>
                             <option value="manager-banner">manager-banner</option>

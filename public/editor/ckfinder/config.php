@@ -34,7 +34,7 @@ $config['authentication'] = function () {
 
 
 $config['licenseName'] = $_SERVER['SERVER_NAME'];
-$config['licenseKey']  = 'LFCFA2RDMH9N1NY45T9D57SVAHXGT';
+$config['licenseKey']  = 'YKPKTNJDCU16KDWBTCUD5L37QTTND';
 
 
 
@@ -69,7 +69,7 @@ $config['images'] = array(
 $config['backends'][] = array(
     'name'         => 'default',
     'adapter'      => 'local',
-    'baseUrl'      => 'editor/ckfinder/files/',
+    'baseUrl'      => '/ckfinder/userfiles/',
 //  'root'         => '', // Can be used to explicitly set the CKFinder user files directory.
     'chmodFiles'   => 0777,
     'chmodFolders' => 0755,
