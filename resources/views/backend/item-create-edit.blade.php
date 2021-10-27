@@ -124,6 +124,7 @@
                                         <option value="enviroment-banner">enviroment-banner</option>
                                         <option value="service-banner">service-banner</option>
                                         <option value="vision-banner">vision-banner</option>
+                                        <option value="mission-banner">mission-banner</option>
                                         <option value="manager-banner">manager-banner</option>
                                         <option value="partner-banner">partner-banner</option>
                                         <option value="recent_post-banner">recent_post-banner</option>

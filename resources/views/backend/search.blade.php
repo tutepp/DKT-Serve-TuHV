@@ -90,7 +90,7 @@
                     <div class="col-lg-3">
                         <div class="input-group flex-nowrap">
                             <span class="input-group-text" id="addon-wrapping" style="background-color: #e6e6ff "><i class="fas fa-book-reader"></i></span>
-                            <input type="text" class="form-control" placeholder="Tiêu đề" aria-label="Tiêu đề" aria-describedby="addon-wrapping">
+                            <input type="text" class="form-control" placeholder="Tiêu đề" aria-label="Tiêu đề" aria-describedby="addon-wrapping" name="title">
                         </div>
                     </div>
                     <div class="col-lg-3">
@@ -129,6 +129,7 @@
                                 <option value="business-banner">business-banner</option>
                                 <option value="enviroment-banner">enviroment-banner</option>
                                 <option value="vision-banner">vision-banner</option>
+                                <option value="mission-banner">mission-banner</option>
                                 <option value="manager-banner">manager-banner</option>
                                 <option value="partner-banner">partner-banner</option>
                                 <option value="recent_post-banner">recent_post-banner</option>
@@ -157,7 +158,8 @@
 
                 </div>
                 <div class="d-flex justify-content-center" style="margin-top: 10px">
-                    <button type="submit" class="btn btn-success mr-2">Search</button>
+                    <button type="reset" class="btn btn-danger mr-2">{{__('Đặt lại')}}</button>
+                    <button type="submit" class="btn btn-success mr-2">{{__('Tìm kiếm')}}</button>
                 </div>
             </form>
             <table class="table table-bordered table-hover">

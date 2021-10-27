@@ -17,7 +17,7 @@ class ItemController extends Controller
     }
     public function index()
     {   $groups = Group::get(['title','id']);
-        $items = Item::with('user')->orderBy('created_at', 'desc')->paginate(7);
+        $items = Item::with('user')->orderBy('created_at', 'desc')->paginate(10);
         return view('backend.home',['items'=> $items,'groups'=>$groups]);
 
     }
@@ -34,6 +34,7 @@ class ItemController extends Controller
         $item =Item::create($request->all());
         $item->group()->attach($request->group_id);
         $item->save();
+        Toastr::success('Bạn đã tạo thành công', 'Thành công');
         return redirect()->route('home.index');
     }
 
@@ -92,10 +93,11 @@ class ItemController extends Controller
         }
         if($request->from and $request->to)
         {
-            $it->whereBetween('created_at',[$request->from ,$request->to])->get();
+            $it->whereBetween('created_at',[$request->from ,$request->to]);
         }
 
-        $items = $it->all();
+        $items = $it->paginate(10);
+
         return view('backend.search',['items'=>$items, 'groups'=>$groups]);
 
     }

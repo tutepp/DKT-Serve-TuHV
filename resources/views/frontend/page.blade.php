@@ -173,14 +173,16 @@
                     <!-- Tabs -->
                     <!-- Tab Content -->
                     <div class="tab-content">
-
+                        @foreach($misionBanners as $misionBanner)
                         <div class="tab-pane fade show active" id="tab1">
                             <div class="d-flex align-items-center mb-2">
                                 <i class="bi bi-check2"></i>
-                                <h4>{{__('Sứ mệnh của chúng tôi')}}</h4>
+                                <h4>{{$misionBanner->title}}</h4>
                             </div>
-                            <p>Không ngừng nâng cao mọi chất lượng dịch vụ và sản phẩm để phục vụ khách hàng và đối tác, luôn luôn đặt ra những tiêu chuẩn mới hơn, cao hơn để hoàn thiện mọi hoạt động kinh doanh và các sản phẩm, dịch vụ đưa ra thị trường.</p>
-                        </div><!-- End Tab 1 Content -->
+                            <p>{!! $misionBanner->content !!}</p>
+                        </div>
+                        @endforeach
+                        <!-- End Tab 1 Content -->
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -199,54 +201,15 @@
 
                     <div class="col-xl-8 d-flex content">
                         <div class="row align-self-center gy-4">
-
+                            @foreach($visionBanners as $visionBanner)
                             <div class="col-md-6 icon-box" data-aos="fade-up">
-                                <i class="ri-line-chart-line"></i>
-                                <div>
-                                    <h4>Dẫn đầu về Thương mại điện </h4>
-                                    <p>Chúng tôi đang nỗ lực không ngừng từng ngày để trở thành công ty hàng đầu trong lĩnh vực Thương mại điện tử tại thị trường Đông Nam Á</p>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                                <i class="ri-stack-line"></i>
-                                <div>
-                                    <h4>Khẳng định vị thế của bản thân trên thị trường quốc tế</h4>
-                                    <p>Hướng tới mục tiêu thúc đẩy sự phát triển của lĩnh vực thương mại điện tử tại Việt Nam nói chung, và lĩnh vực thương mại điện tử xuyên biên giới nói riêng.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                                <i class="ri-brush-4-line"></i>
-                                <div>
-                                    <h4>Doanh nghiệp Fulfillment hàng đầu</h4>
-                                    <p>Với tiềm lực về dịch vụ thuê kho và nhân sự , DKT đang phấn đấu trở thành doanh nghiệp Fulfillment hàng đầu tại khu vực Châu Á</p>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
                                 <i class="ri-magic-line"></i>
                                 <div>
-                                    <h4>Cầu nối vươn ra thế giới</h4>
-                                    <p>Là cầu nối giữa nhà bán hàng và khách hàng trong và ngoài nước</p>
+                                    <h4>{{$visionBanner->title}}</h4>
+                                    <p>{!! $visionBanner->content !!}</p>
                                 </div>
                             </div>
-
-                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                                <i class="ri-command-line"></i>
-                                <div>
-                                    <h4>Đơn giản hoá mở rộng kinh doanh</h4>
-                                    <p>Đơn giản hóa các điều kiện đầu tư kinh doanh giảm chi phí, thủ tục cho doanh nghiệp</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-                                <i class="ri-radar-line"></i>
-                                <div>
-                                    <h4>Tối ưu hoá lợi nhuận cho doanh nghiệp</h4>
-                                    <p>Lợi nhuận tăng cho doanh nghiệp</p>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

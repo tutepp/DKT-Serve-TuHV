@@ -24,6 +24,8 @@ class PageController extends Controller
         $headBanners =$this->getHeadBanner();
         $serviceBanners =$this->getServiceBanner();
         $enviromentBanners = $this->getEnviromentBanner();
+        $visionBanners = $this->getVisionBanner();
+        $misionBanners = $this->getMisionBanner();
         return view('frontend.page', ['items'=>$items,
             'recentPosts'=>$recentPosts,
             'introBanner'=>$introBanner,
@@ -33,6 +35,8 @@ class PageController extends Controller
             'headBanners'=> $headBanners,
             'serviceBanners'=> $serviceBanners,
             'enviromentBanners'=>$enviromentBanners,
+            'visionBanners'=>$visionBanners,
+            'misionBanners'=>$misionBanners
         ]);
     }
     public function getRecentPost()
@@ -75,7 +79,17 @@ class PageController extends Controller
     public function getEnviromentBanner()
     {
         return
-            Item::where('position','enviroment-banner')->get();
+            Item::where('position','enviroment-banner')->where('status',1)->get(['id','title','content']);
+    }
+    public function getVisionBanner()
+    {
+        return
+            Item::where('position','vision-banner')->where('status',1)->get(['id','title','content']);
+    }
+    public function getMisionBanner()
+    {
+        return
+            Item::where('position','mission-banner')->where('status',1)->get(['id','title','content']);
     }
 
 
