@@ -70,8 +70,6 @@
         </div>
 
         <div class="card-body">
-
-            <!--begin::Search Form-->
             <?php
             if(isset($item)){
                 $action = route("home.update",$item->id);

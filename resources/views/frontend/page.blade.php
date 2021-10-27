@@ -155,49 +155,14 @@
 
                 <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
                     <div class="row align-self-center gy-4">
-
+                    @foreach($enviromentBanners as $enviromentBanner)
                         <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
                             <div class="feature-box d-flex align-items-center">
                                 <i class="bi bi-check"></i>
-                                <h3>Năng động, sáng tạo</h3>
+                                <h3>{{$enviromentBanner->title}}</h3>
                             </div>
                         </div>
-
-                        <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
-                            <div class="feature-box d-flex align-items-center">
-                                <i class="bi bi-check"></i>
-                                <h3>Không ngừng phát triển</h3>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
-                            <div class="feature-box d-flex align-items-center">
-                                <i class="bi bi-check"></i>
-                                <h3>Đón đầu xu thế công nghệ 4.0</h3>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
-                            <div class="feature-box d-flex align-items-center">
-                                <i class="bi bi-check"></i>
-                                <h3>Mang lại lợi ích tốt nhất cho khách hàng</h3>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
-                            <div class="feature-box d-flex align-items-center">
-                                <i class="bi bi-check"></i>
-                                <h3>Mạng lưới rộng khắp trên nhiều quốc gia</h3>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
-                            <div class="feature-box d-flex align-items-center">
-                                <i class="bi bi-check"></i>
-                                <h3>Luôn cải thiện và nâng cấp chất lượng</h3>
-                            </div>
-                        </div>
-
+                    @endforeach
                     </div>
                 </div>
             </div> <!-- / row -->

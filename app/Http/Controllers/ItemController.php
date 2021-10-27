@@ -34,7 +34,6 @@ class ItemController extends Controller
         $item =Item::create($request->all());
         $item->group()->attach($request->group_id);
         $item->save();
-        Toastr::success('Bạn đã tạo thành công', 'Thành công');
         return redirect()->route('home.index');
     }
 
@@ -96,8 +95,7 @@ class ItemController extends Controller
             $it->whereBetween('created_at',[$request->from ,$request->to])->get();
         }
 
-        $items = $it->paginate(5);
-
+        $items = $it->all();
         return view('backend.search',['items'=>$items, 'groups'=>$groups]);
 
     }
